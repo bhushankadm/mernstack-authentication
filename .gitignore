@@ -1,0 +1,12 @@
+# Node modules for client and server
+client/node_modules/
+server/node_modules/
+
+# Build or dist folders
+client/build/
+client/dist/
+server/dist/
+
+# Environment files
+client/.env
+server/.env
