@@ -10,10 +10,10 @@ function Login({ setIsLoggedIn, isLoggedIn }) {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        axios.post("https://extraordinary-seahorse-f64eb3.netlify.app/login", { email, password }, { withCredentials: true })
+        axios.post("http://localhost:3001/login", { email, password }, { withCredentials: true })
             .then(result => {
                 if (result.data === "Success") {
-                    axios.get('https://extraordinary-seahorse-f64eb3.netlify.app/user', { withCredentials: true })
+                    axios.get('http://localhost:3001/user', { withCredentials: true })
                         .then(response => {
                             if (response.data.user) {
                               setIsLoggedIn(true);

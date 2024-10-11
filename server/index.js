@@ -6,12 +6,13 @@ const dotenv = require("dotenv");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const UserModel = require("./model/User");
+const BASE_URL = process.env.BASE_URL
 
 dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: 'https://extraordinary-seahorse-f64eb3.netlify.app', // Replace with your frontend's URL
+    origin: '${BASE_URL}', // Replace with your frontend's URL
     credentials: true
 }));
 

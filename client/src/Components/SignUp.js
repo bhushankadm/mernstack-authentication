@@ -12,7 +12,7 @@ function SignUp(){
 
     const handleSignup = (e) => {
         e.preventDefault();
-        axios.post("https://extraordinary-seahorse-f64eb3.netlify.app/signup", { name, email, password })
+        axios.post("http://localhost:3001/signup", { name, email, password })
             .then(result => {
                 if (result.status === 201) {
                     navigate("/login");
@@ -50,7 +50,7 @@ function SignUp(){
                         <TextField style={row} sx={{label: { fontWeight: '700', fontSize:"1.3rem" }}} fullWidth label="Password" variant="outlined" type="password" placeholder="Enter Password" name="password" onChange={(e)=>setPassword(e.target.value)} />
                         <Button style={btnStyle} variant="contained" type="submit">SignUp</Button>
                     </form>
-                    <p>Already have an account?<a href="/login"> Login</a></p>
+                    <p>Already have an account?<Link href="/login"> Login</Link></p>
                 </Paper>
             </Grid>
         </div>

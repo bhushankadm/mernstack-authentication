@@ -7,7 +7,7 @@ function Logout({ setIsLoggedIn }) {
     const navigate = useNavigate();
 
     const handleLogout = () => {
-        axios.post("https://extraordinary-seahorse-f64eb3.netlify.app/logout", {}, { withCredentials: true })
+        axios.post("http://localhost:3001/logout", {}, { withCredentials: true })
             .then(response => {
                 if (response.status === 200) {
                     setIsLoggedIn(false);
