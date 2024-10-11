@@ -7,6 +7,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const UserModel = require("./model/User");
 const BASE_URL = process.env.BASE_URL
+const PORT = process.env.PORT || 3000
 
 dotenv.config();
 const app = express();
