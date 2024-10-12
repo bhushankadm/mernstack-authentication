@@ -6,14 +6,13 @@ const dotenv = require("dotenv");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const UserModel = require("./model/User");
-const BASE_URL = process.env.BASE_URL
-const PORT = process.env.PORT || 3000
 
 dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: '${BASE_URL}', // Replace with your frontend's URL
+    origin:'http://localhost:3000', // Replace with your frontend's URL
+', // Replace with your frontend's URL
     credentials: true
 }));
 
